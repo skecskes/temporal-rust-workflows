@@ -1,0 +1,31 @@
+[package]
+name = "money-transfer-project-template-rust"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.66"
+log = "0.4.17"
+rand = "0.8.5"
+serde = "1.0.147"
+simple_logger = "4.0.0"
+actix-web = "4"
+temporal-client = { git = "https://github.com/temporalio/sdk-core" }
+temporal-sdk = { git = "https://github.com/temporalio/sdk-core" }
+temporal-sdk-core = { git = "https://github.com/temporalio/sdk-core" }
+temporal-sdk-core-api = { git = "https://github.com/temporalio/sdk-core" }
+temporal-sdk-core-protos = { git = "https://github.com/temporalio/sdk-core" }
+temporal-sdk-core-test-utils = { git = "https://github.com/temporalio/sdk-core" }
+tokio = "1.21.2"
+actix-cors = "0.6.4"
+derive_more = "0.99.17"
+
+[[bin]]
+name = "main"
+path = "src/main.rs"
+
+[[bin]]
+name = "worker"
+path = "src/worker/main.rs"
